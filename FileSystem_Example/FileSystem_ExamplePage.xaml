@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:FileSystem_Example" 
+	x:Class="FileSystem_Example.FileSystem_ExamplePage">
+<!--	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />-->
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+	</ContentPage.Padding>
+
+	<AbsoluteLayout>
+	<ActivityIndicator 
+			x:Name="xAI"
+			Color="Black" 
+			AbsoluteLayout.LayoutFlags="All" 
+			AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"/>
+	</AbsoluteLayout>
+	<StackLayout
+			VerticalOptions="CenterAndExpand"
+			HorizontalOptions="CenterAndExpand"
+			AbsoluteLayout.LayoutFlags="All" 
+			AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+			<Entry x:Name="xWriteEntry" Keyboard="Chat"/>
+			<Button Clicked="Write_Clicked" Text="Write File Context"/>
+			<Label x:Name="xLabel" FontSize="20" Text="????" VerticalTextAlignment="Center"/>
+			<Button Clicked="Read_Clicked" Text="Get File Context"/>
+	</StackLayout>
+</ContentPage>

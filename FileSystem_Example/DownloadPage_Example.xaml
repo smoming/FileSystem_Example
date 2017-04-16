@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="FileSystem_Example.DownloadPage_Example">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+	</ContentPage.Padding>
+
+	<AbsoluteLayout>
+		<StackLayout
+				VerticalOptions="CenterAndExpand"
+				HorizontalOptions="CenterAndExpand"
+				AbsoluteLayout.LayoutFlags="All" 
+				AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+				<Label Text="圖片網址"/>
+				<Entry x:Name="xLink" Placeholder="輸入網址" Keyboard="Text"/>
+				<Image x:Name="xImage" Aspect="AspectFit" />
+				<Button Clicked="Read_Clicked" Text="Download Image And Read"/>
+		</StackLayout>
+		<ActivityIndicator 
+			IsVisible="false"
+			x:Name="xAI"
+			Color="Black" 
+			AbsoluteLayout.LayoutFlags="All" 
+			AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"/>
+	</AbsoluteLayout>
+</ContentPage>
